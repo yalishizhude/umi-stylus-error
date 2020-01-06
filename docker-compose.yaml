@@ -1,0 +1,17 @@
+version: '2'
+services:
+  gtxorder-web:
+    image: node:12
+    container_name: gtxorder-web
+    ports: 
+      - "8000"
+    tty: true
+    stdin_open: true
+    working_dir: /app
+    volumes:
+    - "./:/app"
+    networks:
+    - gtxorder
+
+networks:
+  gtxorder:
